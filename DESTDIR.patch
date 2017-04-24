@@ -1,0 +1,11 @@
+--- ZEsarUX-5.0/generate_install_sh.sh.orig	2017-04-20 19:15:37.000000000 +0200
++++ ZEsarUX-5.0/generate_install_sh.sh	2017-04-24 18:50:34.505917916 +0200
+@@ -1,7 +1,7 @@
+ #!/bin/bash
+ 
+ 
+-INSTALLPREFIX=`cat compileoptions.h |grep INSTALL_PREFIX|cut -d '"' -f2`
++INSTALLPREFIX=$DESTDIR`cat compileoptions.h |grep INSTALL_PREFIX|cut -d '"' -f2`
+ 
+ 
+ cat > install.sh << _EOF
